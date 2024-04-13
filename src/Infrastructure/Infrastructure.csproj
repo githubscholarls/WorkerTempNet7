@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>WT.DirectLogistics.Infrastructure</RootNamespace>
+    <AssemblyName>WT.DirectLogistics.Infrastructure</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Persistence\Configurations\**" />
+    <EmbeddedResource Remove="Persistence\Configurations\**" />
+    <None Remove="Persistence\Configurations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Persistence\Repository\WshiMainLineRepository.cs~RF1559cb2.TMP" />
+    <None Remove="Persistence\Repository\WshiMainLineRepository.cs~RF1c90773.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Caching.CSRedis" Version="3.8.671" />
+	  <PackageReference Include="CSRedisCore" Version="3.8.671" />
+	  <PackageReference Include="Dapper" Version="2.1.11" />
+	  <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="7.2.1" />
+	  <PackageReference Include="DotNetCore.CAP.Kafka" Version="7.2.1" />
+	  <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.12" />
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
+	  <PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+	  <PackageReference Include="Npgsql" Version="7.0.6" />
+	  <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Persistence\Repository\" />
+  </ItemGroup>
+
+</Project>
