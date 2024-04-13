@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace WT.DirectLogistics.Application.Common.Mappings
+namespace WT.Trigger.Application.Common.Mappings
 {
     public class MappingProfile : Profile
     {

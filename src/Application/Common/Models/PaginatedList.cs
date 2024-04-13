@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WT.DirectLogistics.Application.Common.Models
+namespace WT.Trigger.Application.Common.Models
 {
     public class PaginatedList<T> 
     {

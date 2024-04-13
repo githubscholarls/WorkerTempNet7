@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WT.DirectLogistics.Application.Common.Models
+namespace WT.Trigger.Application.Common.Models
 {
     public class Result
     {
@@ -18,7 +17,7 @@ namespace WT.DirectLogistics.Application.Common.Models
 
         public static Result Success()
         {
-            return new Result(true, Array.Empty<string>());
+            return new Result(true, new string[] { });
         }
 
         public static Result Failure(IEnumerable<string> errors)

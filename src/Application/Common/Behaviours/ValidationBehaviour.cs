@@ -4,12 +4,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
 using MediatR;
-using ValidationException = WT.DirectLogistics.Application.Common.Exceptions.ValidationException;
+using ValidationException = WT.Trigger.Application.Common.Exceptions.ValidationException;
 
-namespace WT.DirectLogistics.Application.Common.Behaviours
+namespace WT.Trigger.Application.Common.Behaviours
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IRequest<TResponse>
+    public class ValidationBehaviour<TRequest, TResponse> 
+        :IPipelineBehavior<TRequest,TResponse>
+           where TRequest : IRequest<TResponse>
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 

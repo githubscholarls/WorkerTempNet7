@@ -4,9 +4,10 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WT.DirectLogistics.Application.Common.Behaviours
+namespace WT.Trigger.Application.Common.Behaviours
 {
-    public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : IRequest<TResponse>
     {
         private readonly ILogger<TRequest> _logger;
 
@@ -14,6 +15,7 @@ namespace WT.DirectLogistics.Application.Common.Behaviours
         {
             _logger = logger;
         }
+
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
@@ -25,7 +27,7 @@ namespace WT.DirectLogistics.Application.Common.Behaviours
             {
                 var requestName = typeof(TRequest).Name;
 
-                _logger.LogError(ex, "WT.DirectLogistics Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
+                _logger.LogError(ex, "WT.Trigger Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
 
                 throw;
             }

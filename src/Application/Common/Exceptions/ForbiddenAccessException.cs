@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace WT.DirectLogistics.Application.Common.Exceptions
+namespace WT.Trigger.Application.Common.Exceptions
 {
-    [Serializable]
     public class ForbiddenAccessException : Exception
     {
         public ForbiddenAccessException() : base() { }

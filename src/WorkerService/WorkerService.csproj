@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>dotnet-WT.Trigger.WorkerService-2B2D5342-6CC3-413D-B75C-5E6DEFCAED62</UserSecretsId>
+    <AssemblyName>WT.Trigger.WorkerService</AssemblyName>
+    <RootNamespace>WT.Trigger.WorkerService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Exceptionless.AspNetCore" Version="6.0.3" />
+    <PackageReference Include="Exceptionless.Extensions.Hosting" Version="6.0.3" />
+    <PackageReference Include="Exceptionless.Extensions.Logging" Version="6.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Exml\10.12要上线的批量线路.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Exml\10.26要上线的批量线路.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Exml\9.21上线的批量线路.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Exml\9.28要上线的批量线路.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Exml\线路描述路线.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+</Project>

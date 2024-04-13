@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>WT.DirectLogistics.Domain</RootNamespace>
-    <AssemblyName>WT.DirectLogistics.Domain</AssemblyName>
+    <RootNamespace>WT.Trigger.Domain</RootNamespace>
+    <AssemblyName>WT.Trigger.Domain</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,15 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Bson" Version="2.21.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.12" />
+    <PackageReference Include="MongoDB.Bson" Version="2.22.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Enums\" />
   </ItemGroup>
 
 </Project>

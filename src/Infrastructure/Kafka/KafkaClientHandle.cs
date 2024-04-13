@@ -1,14 +1,14 @@
 ﻿using Confluent.Kafka;
-using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 
-namespace WT.DirectLogistics.Infrastructure.Kafka
+namespace WT.Trigger.Infrastructure.Kafka
 {
-    public class KafkaClientHandle: IDisposable
+    public class KafkaClientHandle : IDisposable
     {
         private readonly IProducer<byte[], byte[]> _producer;
 
@@ -25,4 +25,5 @@ namespace WT.DirectLogistics.Infrastructure.Kafka
             _producer.Dispose();
         }
     }
+
 }

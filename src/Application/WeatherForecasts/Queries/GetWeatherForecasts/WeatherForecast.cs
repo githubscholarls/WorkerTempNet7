@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WT.DirectLogistics.Application.WeatherForecasts.Queries.GetWeatherForecasts
+namespace WT.Trigger.Application.WeatherForecasts.Queries.GetWeatherForecasts
 {
     public class WeatherForecast
     {

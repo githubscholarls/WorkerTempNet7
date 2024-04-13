@@ -1,7 +1,7 @@
-﻿using WT.DirectLogistics.Domain.Common;
+﻿using WT.Trigger.Domain.Common;
 using MediatR;
 
-namespace WT.DirectLogistics.Application.Common.Models
+namespace WT.Trigger.Application.Common.Models
 {
     public class DomainEventNotification<TDomainEvent> : INotification where TDomainEvent : DomainEvent
     {

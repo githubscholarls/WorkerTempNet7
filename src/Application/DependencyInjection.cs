@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using WT.DirectLogistics.Application.Common.Behaviours;
+using WT.Trigger.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace WT.DirectLogistics.Application
+namespace WT.Trigger.Application
 {
     public static class DependencyInjection
     {
@@ -15,7 +15,6 @@ namespace WT.DirectLogistics.Application
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 
             return services;

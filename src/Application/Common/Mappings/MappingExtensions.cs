@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using WT.DirectLogistics.Application.Common.Models;
+using WT.Trigger.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WT.DirectLogistics.Application.Common.Mappings
+namespace WT.Trigger.Application.Common.Mappings
 {
     public static class MappingExtensions
     {

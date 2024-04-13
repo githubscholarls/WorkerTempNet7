@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WT.DirectLogistics.Application.Common.Interfaces
+namespace WT.Trigger.Application.Common.Interfaces
 {
     public interface IDateTime
     {

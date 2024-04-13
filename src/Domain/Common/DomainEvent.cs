@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WT.DirectLogistics.Domain.Common
+namespace WT.Trigger.Domain.Common
 {
     public interface IHasDomainEvent
     {

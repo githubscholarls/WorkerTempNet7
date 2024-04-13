@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace WT.DirectLogistics.Application.Common.Mappings
+namespace WT.Trigger.Application.Common.Mappings
 {
     public interface IMapFrom<T>
     {   

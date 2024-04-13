@@ -1,12 +1,12 @@
-﻿using WT.DirectLogistics.Application.Common.Interfaces;
-using WT.DirectLogistics.Application.Common.Models;
-using WT.DirectLogistics.Domain.Common;
+﻿using WT.Trigger.Application.Common.Interfaces;
+using WT.Trigger.Application.Common.Models;
+using WT.Trigger.Domain.Common;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace WT.DirectLogistics.Infrastructure.Services
+namespace WT.Trigger.Infrastructure.Services
 {
     public class DomainEventService : IDomainEventService
     {

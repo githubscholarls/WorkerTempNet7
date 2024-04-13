@@ -1,16 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Threading;
 using System.Threading.Tasks;
-using WT.DirectLogistics.Domain.Entities;
+using WT.Trigger.Domain.Entities;
 
-namespace WT.DirectLogistics.Application.Common.Interfaces
+namespace WT.Trigger.Application.Common.Interfaces
 {
     public interface IMSDbContext
     {
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        EntityEntry Entry(object entity);
+        EntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
+        int SaveChanges();
+        DbSet<Com> com { get; set; }                                                            
+        DatabaseFacade Database { get; }
     }
 }

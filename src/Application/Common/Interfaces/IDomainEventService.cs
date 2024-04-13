@@ -1,7 +1,7 @@
-﻿using WT.DirectLogistics.Domain.Common;
+﻿using WT.Trigger.Domain.Common;
 using System.Threading.Tasks;
 
-namespace WT.DirectLogistics.Application.Common.Interfaces
+namespace WT.Trigger.Application.Common.Interfaces
 {
     public interface IDomainEventService
     {

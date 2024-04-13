@@ -1,7 +1,7 @@
-﻿using WT.DirectLogistics.Application.Common.Interfaces;
+﻿using WT.Trigger.Application.Common.Interfaces;
 using System;
 
-namespace WT.DirectLogistics.Infrastructure.Services
+namespace WT.Trigger.Infrastructure.Services
 {
     public class DateTimeService : IDateTime
     {
